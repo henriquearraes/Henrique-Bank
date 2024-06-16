@@ -37,8 +37,8 @@ public class ContaPoupanca extends Conta{
 	}
 	
 	public void sacar(double valor) {
-		double limiteSaque=getSaldo()+getLimiteChequeEspecial();
-		if(valor>0 && valor<=limiteSaque) {
+		
+		if(valor>0 && valor <= getSaldo()) {
 			super.sacar(valor);
 			}else {
 				JOptionPane.showMessageDialog(null, "Você não tem fundos!");

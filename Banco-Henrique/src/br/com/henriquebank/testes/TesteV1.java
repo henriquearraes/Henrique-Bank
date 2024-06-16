@@ -53,7 +53,6 @@ public class TesteV1 {
 			 String titular = JOptionPane.showInputDialog("Digite o nome do Titular: ");
 			 
 			 int limiteChequeEspecialpoup = 80;
-			 JOptionPane.showMessageDialog(null, "Você recebeu um Cheque Especial de R$80,00!");
 			 
 			 conta = new ContaPoupanca(escolhaNumAgenciaStr, numConta, titular, limiteChequeEspecialpoup);
 		}else {
