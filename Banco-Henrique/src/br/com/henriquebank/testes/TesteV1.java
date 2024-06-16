@@ -54,6 +54,7 @@ public class TesteV1 {
 			 
 			 int limiteChequeEspecialpoup = 80;
 			 JOptionPane.showMessageDialog(null, "Você recebeu um Cheque Especial de R$80,00!");
+			 
 			 conta = new ContaPoupanca(escolhaNumAgenciaStr, numConta, titular, limiteChequeEspecialpoup);
 		}else {
 			JOptionPane.showMessageDialog(null, "Opção inválida!");
@@ -69,16 +70,16 @@ public class TesteV1 {
             int escolhaOperacao = JOptionPane.showOptionDialog(null, "Escolha uma operação", "Operações",
                     JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, opcoesOperacao, opcoesOperacao[0]);
             if(escolhaOperacao==0) {
-            	String valorDepositoStr =JOptionPane.showInputDialog("Digite o valor a ser depositado: ");
+            	String valorDepositoStr =JOptionPane.showInputDialog("Digite o valor a ser depositado: \nOBS.:Haverá um adicional de R$2,00\npara contas poupança.");
             	double valorDeposito = Double.parseDouble(valorDepositoStr);
-            	if (valorDeposito >0  ) {
+            	if (valorDeposito >0) {
             		conta.deposito(valorDeposito);
             		JOptionPane.showMessageDialog(null, "Valor de R$"+valorDeposito+" foi depositado!");
             	}else if (valorDeposito <0){
             		JOptionPane.showMessageDialog(null, "Valor Incorreto! Digite um número positivo");
             	}	
             }else if(escolhaOperacao==1) {
-            	String valorSaqueStr =JOptionPane.showInputDialog("Digite o valor a ser sacado: \nOBS.:Taxa de R$1,00");
+            	String valorSaqueStr =JOptionPane.showInputDialog("Digite o valor a ser sacado: \nOBS.:Taxa de R$1,00 para Contas Correntes");
             	double valorSaque = Double.parseDouble(valorSaqueStr);
             	if(valorSaque <= conta.getSaldo()) {
             		conta.sacar(valorSaque);

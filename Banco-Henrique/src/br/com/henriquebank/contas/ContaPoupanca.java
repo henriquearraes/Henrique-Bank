@@ -4,8 +4,8 @@ import javax.swing.JOptionPane;
 
 public class ContaPoupanca extends Conta{
 
-	public static final double TAXA_DEPOSITO_JUROS_CONTA_POUPANCA = 0.02*100;
-	private int limiteChequeEspecial;
+	public final double TAXA_DEPOSITO_JUROS_CONTA_POUPANCA = 0.02*100;
+	public int limiteChequeEspecial;
 
 	public ContaPoupanca(int numAgencia, int numConta, String titular, int limiteChequeEspecial) {
 		super(numAgencia, numConta, titular);
@@ -27,8 +27,8 @@ public class ContaPoupanca extends Conta{
 	
 	
 	public void deposito(double valor) {
-		double depositoLimite = getSaldo()+TAXA_DEPOSITO_JUROS_CONTA_POUPANCA; 
-		if(valor>0 && valor<=depositoLimite) {
+		 
+		if(valor>0) {
 		valor = valor+TAXA_DEPOSITO_JUROS_CONTA_POUPANCA;
 		super.deposito(valor);
 		}else {
@@ -37,7 +37,7 @@ public class ContaPoupanca extends Conta{
 	}
 	
 	public void sacar(double valor) {
-		double limiteSaque=getSaldo()+limiteChequeEspecial;
+		double limiteSaque=getSaldo()+getLimiteChequeEspecial();
 		if(valor>0 && valor<=limiteSaque) {
 			super.sacar(valor);
 			}else {
