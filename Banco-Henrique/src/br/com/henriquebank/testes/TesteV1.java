@@ -79,7 +79,7 @@ public class TesteV1 {
             		JOptionPane.showMessageDialog(null, "Valor Incorreto! Digite um número positivo");
             	}	
             }else if(escolhaOperacao==1) {
-            	String valorSaqueStr =JOptionPane.showInputDialog("Digite o valor a ser sacado: \nOBS.:Taxa de R$1,00 para Contas Correntes");
+            	String valorSaqueStr =JOptionPane.showInputDialog("Digite o valor a ser sacado:  \nOBS.:Taxa de R$1,00 para Contas Correntes");
             	double valorSaque = Double.parseDouble(valorSaqueStr);
             	if(valorSaque <= conta.getSaldo()) {
             		conta.sacar(valorSaque);
