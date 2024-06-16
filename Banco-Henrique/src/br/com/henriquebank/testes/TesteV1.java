@@ -61,7 +61,7 @@ public class TesteV1 {
 			return;
 		}
 		JOptionPane.showMessageDialog(null, "A sua conta é: \nAgência ==> "+conta.getNumAgencia()+"\nConta ==> "+conta.getNumConta()+
-				"\nTitular ==> "+conta.getTitular()+"\nSaldo ==> "+conta.getSaldo()+"\nTipo ==> "+escolhaConta);
+				"\nTitular ==> "+conta.getTitular()+"\nSaldo ==> "+conta.getSaldo());
 		
 		boolean executando = true;
 		
