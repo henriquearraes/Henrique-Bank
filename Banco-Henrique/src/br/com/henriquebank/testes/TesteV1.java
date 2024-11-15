@@ -59,8 +59,7 @@ public class TesteV1 {
 			JOptionPane.showMessageDialog(null, "Opção inválida!");
 			return;
 		}
-		JOptionPane.showMessageDialog(null, "A sua conta é: \nAgência ==> "+conta.getNumAgencia()+"\nConta ==> "+conta.getNumConta()+
-				"\nTitular ==> "+conta.getTitular()+"\nSaldo ==> "+conta.getSaldo());
+		JOptionPane.showMessageDialog(null, "A sua conta é: \nTitular ==> "+conta.getTitular()+"\nSaldo ==> "+conta.getSaldo());
 		
 		boolean executando = true;
 		
